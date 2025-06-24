@@ -71,17 +71,3 @@ def getScore(self, team):
     return score
 """
 
-#funzione per trovare i vicini di un nodo ordinati per il peso
-"""
-def getNeighborsSorted(self, source):
-    vicini = nx.neighbors(self._graph, source) # [v0, v1, v2, ...]
-
-    #vicini = self._graph.neighbors(source)
-    viciniTuple = []
-
-    for v in vicini:
-        viciniTuple.append((v, self._graph[source][v]["weight"])) # [ (v0, p0) (v1,p1) () ]
-
-    viciniTuple.sort(key=lambda x: x[1], reverse=True)
-    return viciniTuple
-"""
