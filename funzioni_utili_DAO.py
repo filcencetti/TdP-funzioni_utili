@@ -1,5 +1,4 @@
 #funzione del DAO per prendere parametri dal database
-"""
 @staticmethod
     def getYears(se serve mettere un parametro. es. year):
         conn = DBConnect.get_connection()
@@ -17,11 +16,8 @@
         cursor.close()
         conn.close()
         return result
-"""
-
 
 # funzione del DAO per prendere NODI dal database
-"""
 @staticmethod
     def getYears():
         conn = DBConnect.get_connection()
@@ -39,11 +35,9 @@
         cursor.close()
         conn.close()
         return result
-"""
 
 
 #funzione del DAO per prendere ARCHI dal database
-"""
 @staticmethod
     def getYears():
         conn = DBConnect.get_connection()
@@ -61,4 +55,3 @@
         cursor.close()
         conn.close()
         return result
-"""

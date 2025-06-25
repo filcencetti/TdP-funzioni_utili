@@ -1,5 +1,5 @@
 ### FUNZIONE PER TROVARE CAMMINO DI PESO MASSIMO CON VINCOLO: (IN QUESTO CASO: PESO ARCHI DECRESCENTE)
-"""
+
 def getBestPath(self, startStr):
     self._bestPath = []
     self._bestScore = 0
@@ -29,10 +29,9 @@ def ricorsione(self, parziale):
             parziale.append(v)
             self.ricorsione(parziale)
             parziale.pop()
-"""
+
 
 ### CAMMINO DI PESO MASSIMO AVENTE LUNGHEZZA PARI A LUN
-"""
 def getOptPath(self, source, lun):
     self._bestPath = []
     self._bestCost = 0
@@ -69,10 +68,8 @@ def costo(self, listObjects):
     for i in range(0, len(listObjects) - 1):
         totCosto += self._graph[listObjects[i]][listObjects[i + 1]]["weight"]
     return totCosto
-"""
 
 ### insieme di K oggetti
-"""
 def getDreamTeam(self, k):
     self._bestPath = []
     self._bestScore = 1000
@@ -101,10 +98,8 @@ def getScore(self, team): # la somma degli oggetti nell'insieme è la somma dei 
             if e[0] not in team and e[1] in team:
                 score += e[2]["weight"]
         return score
-"""
 
 ### PERCORSO CHE MASSIMIZZI LA SOMMA DEI PESI TRA DUE NODI
-"""
 def getCamminoOttimo(self, v0, v1, t):
     self._bestPath = []
     self._bestObjFun = 0
@@ -139,11 +134,9 @@ def getObjFun(self, listOfNodes):
     for i in range(0, len(listOfNodes) - 1):
         objval += self._graph[listOfNodes[i]][listOfNodes[i + 1]]["weight"]
     return objval
-"""
 
 ### PERCORSO PIù LUNGO IN TERMINI DI ARCHI (SENZA CONSIDERARE IL PESO)
 # SI PUò AGGIUNGERE UN ARCO SOLO SE IL SUO PESO è MAGGIORE DI TUTTI I PESI GIà PRESENTI
-"""
 def searchPath(self, product_number):
     nodoSource = self.idMap[product_number]
     parziale = []
@@ -183,4 +176,3 @@ def isNovel(self, e, parziale):
         return True
     e_inv = (e[1], e[0], e[2])
     return (e_inv not in parziale) and (e not in parziale)
-"""

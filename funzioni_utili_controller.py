@@ -1,7 +1,6 @@
-#funzione per inserire un oggetto in un menù a tendina non solo una stringa
-"""
-esempio per inserire un anno, ma si può esportare a qualsiasi oggetto
+# funzione per inserire un oggetto in un menù a tendina non solo una stringa
 
+# esempio per inserire un anno, ma si può esportare a qualsiasi oggetto
     def fillDDYear(self):
         years = self._model.getAllYears()
         for year in years:
@@ -14,10 +13,9 @@ esempio per inserire un anno, ma si può esportare a qualsiasi oggetto
         else:
             self._selectedYear = e.control.data
         print(f"Anno selezionato: {self._selectedYear}")
-"""
+
 
 #funzione per creare il grafo
-"""
     def handleCreaGrafo(self,e):
         if parametro is None:
             self._view.txt_result.controls.append(ft.Text("Selezionare parametro!", color='red'))
@@ -30,11 +28,11 @@ esempio per inserire un anno, ma si può esportare a qualsiasi oggetto
         self._view.txt_result.controls.append(ft.Text(f"Numero di nodi:{nodes}"))
         self._view.txt_result.controls.append(ft.Text(f"Numero di archi:{edges}"))
         self._view.update_page()
-"""
 
-#funzione per gestire l'input di un parametro da parte dell'utente
-#può essere sia per la ricorsione che per il grafo o altre cose
-"""
+
+# funzione per gestire l'input di un parametro da parte dell'utente
+# può essere sia per la ricorsione che per il grafo o altre cose
+
 VALORE = self._view.campotestualeperinserirevalore.value
         if K == "":
             self._view.txt_result.controls.clear()
@@ -43,7 +41,7 @@ VALORE = self._view.campotestualeperinserirevalore.value
             self._view.update_page()
             return
 
-se è un valore che deve essere intero:
+# se è un valore che deve essere intero:
         try:
             intK = int(K)
         except ValueError:
@@ -51,4 +49,3 @@ se è un valore che deve essere intero:
             self._view.txt_result.controls.append(
                 ft.Text("Attenzione, il valore inserito non è un intero!", color='red'))
             return
-"""

@@ -1,5 +1,5 @@
-"""
-def handleCreaGrafo(self, e):
+
+    def handleCreaGrafo(self, e):
         dMinTxt = self._view._txtInDurata.value #srt
         if dMinTxt == "":
             self._view.txt_result.controls.clear()
@@ -25,9 +25,6 @@ def handleCreaGrafo(self, e):
         self._fillDD(self._model.getAllNodes())
 
         self._view.update_page()
-
-    # def getSelectedAlbum(self, e):
-    #     pass
 
     def _fillDD(self, listOfNodes):
         listOfNodes.sort(key= lambda x: x.Title)
@@ -63,10 +60,6 @@ def handleCreaGrafo(self, e):
             f"ha {size} nodi e una durata totale di {dTotCC} minuti"))
         self._view.update_page()
 
-
-
-
-
     def handleGetSetAlbum(self, e):
         sogliaTxt = self._view._txtInSoglia.value
         if sogliaTxt == "":
@@ -100,5 +93,3 @@ def handleCreaGrafo(self, e):
             self._view.txt_result.controls.append(ft.Text(n))
 
         self._view.update_page()
-
-"""
