@@ -39,6 +39,28 @@
         return self._graph.number_of_nodes(), self._graph.number_of_edges()
 """
 
+#creazione grafo con archi aggiunti tramite idMap
+"""
+def buildGraph(self, durataMin):
+        self._grafo.clear()
+        self._allNodi = DAO.getAlbums(durataMin)
+        self._grafo.add_nodes_from(self._allNodi)
+        self._idMapAlbum = {n.AlbumId: n for n in self._allNodi}
+        self._allEdges = DAO.getAllEdges(self._idMapAlbum)
+        self._grafo.add_edges_from(self._allEdges)
+"""
+#altra cosa che si può fare per aggiungere gli archi
+"""
+allEdges = DAO.getDriverYearResults(anno, self._idMap)
+        for e in allEdges:
+                self._graph.add_edge(e[0], e[1], weight=e[2])
+
+e nel DAO: passare idMap come parametro, nella query restituire nodo1, nodo2, peso
+e poi: for row in cursor:
+            results.append((idMap[row["d1"]],idMap[row["d2"]], row["cnt"]))
+
+"""
+
 
 #schema per la ricorsione
 """
